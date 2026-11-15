@@ -1,4 +1,4 @@
-# Basalt Desktop 🌑
+# Basalt Desktop
 
 [![Electron 33](https://img.shields.io/badge/Electron-33-47848F?logo=electron)](https://www.electronjs.org/)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%20x64-blue?logo=windows)](https://microsoft.com/windows)
@@ -10,7 +10,7 @@
 
 ---
 
-## 🔒 Core Philosophy
+## Core Philosophy
 
 1. **Your Data is Yours Forever**: Your vault is just a regular folder on your PC. Notes are plain `.md` text files. If Basalt disappears tomorrow, all your notes open cleanly in Notepad, VS Code, Obsidian, or Git.
 2. **True Byte-for-Byte Preservation**: Basalt respects your files. Code blocks with blank lines, Windows CRLF line endings, trailing newlines, and block IDs (`^block-id`) are preserved down to the exact byte.
@@ -19,26 +19,30 @@
 
 ---
 
-## ✨ Features
+## Features
 
-### 📝 Obsidian-Style Writing Flow
+### Obsidian-Style Writing Flow
+
 - **Continuous Page Editor**: Write without distraction. No artificial block barriers, no cursor jumping, and no disappearing blank lines when you click away.
 - **Smart Lists**: Automatic bullet/numbered list continuation on `Enter`, and clean exit on empty markers.
-- **Live Preview & Source Mode**: Switch between visual typography (`Ctrl+E`), raw markdown source, and read-only preview.
+- **Live Preview & Source Mode**: Switch between visual typography (`Ctrl+E`), raw Markdown source, and read-only preview.
 - **Full Right-Click Context Menus**: Obsidian-exact text and navigation menus with hotkey indicators, formatting submenus, and link actions.
-- **YAML Frontmatter & Properties**: Visual properties manager that reads and writes clean YAML at the top of your markdown files.
+- **YAML Frontmatter & Properties**: Visual properties manager that reads and writes clean YAML at the top of your Markdown files.
 
-### 📂 Vaults & Filesystem Integration
+### Vaults & Filesystem Integration
+
 - **Direct Disk Access**: Reads and writes directly to local storage via high-performance Node.js filesystem APIs.
 - **Live File Watching**: Edit files externally in VS Code or sync them via Syncthing/Git—Basalt updates automatically.
 - **Recycle Bin Protection**: Deleting a file or folder safely moves it to the **Windows Recycle Bin**—no accidental data loss.
 - **Link Auto-Refactoring**: Renaming a note or moving a folder automatically updates all `[[wikilinks]]` throughout your entire vault.
 
-### 🌐 Graph View & Infinite Canvas
-- **Force-Directed Graph (`Ctrl+G`)**: Visualize connections between your notes with neighborhood highlighting, tag filtering, node sizing, and physics controls.
-- **Infinite Spatial Canvas (`.canvas`)**: JSON Canvas compatible boards. Place markdown cards, connect notes, color-code ideas, and organize with keyboard shortcuts (`Ctrl+C`, `Ctrl+V`, `Ctrl+D`).
+### Graph View & Infinite Canvas
 
-### ⚡ Navigation & Workspace
+- **Force-Directed Graph (`Ctrl+G`)**: Visualize connections between your notes with neighborhood highlighting, tag filtering, node sizing, and physics controls.
+- **Infinite Spatial Canvas (`.canvas`)**: JSON Canvas-compatible boards. Place Markdown cards, connect notes, color-code ideas, and organize with keyboard shortcuts (`Ctrl+C`, `Ctrl+V`, `Ctrl+D`).
+
+### Navigation & Workspace
+
 - **Multi-Window Support**: Open any note in a separate native window with full live-sync editing.
 - **Split Panes**: Split editors vertically or horizontally with drag-resizable panes.
 - **Command Palette (`Ctrl+P`) & Quick Switcher (`Ctrl+O`)**: Instantly jump to notes, trigger actions, or create new files.
@@ -49,7 +53,7 @@
 
 ---
 
-## 📥 Downloads
+## Downloads
 
 Pre-built Windows binaries are generated in the `release/` directory:
 
@@ -60,27 +64,52 @@ Pre-built Windows binaries are generated in the `release/` directory:
 
 ---
 
-## 🛠️ Building & Running
+## Building From Source
 
-### Quick Start (Run Electron App)
-```bash
-npm start
-```
+### Prerequisites
 
-### Running the Demo Vault in Browser
-```bash
-npm run serve:demo
-```
+- Windows 10/11 (x64)
+- [Node.js](https://nodejs.org/) v20+
+- `npm`
 
-### Packaging Windows Installer & Portable `.exe`
-```bash
-npm run dist
-```
-*The packaged binaries will be output to the `release/` folder.*
+### Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/basalt-desktop.git
+   cd basalt-desktop
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Build the renderer & IPC bridge:**
+
+   ```bash
+   node scripts/build-web.mjs
+   ```
+
+4. **Run in development mode:**
+
+   ```bash
+   npm start
+   ```
+
+5. **Package Windows Installer & Portable `.exe`:**
+
+   ```bash
+   npm run dist
+   ```
+
+   *The packaged binaries will be output to the `release/` folder.*
 
 ---
 
-## ⌨️ Default Keyboard Shortcuts
+## Default Keyboard Shortcuts
 
 | Shortcut | Action |
 | --- | --- |
@@ -100,9 +129,9 @@ npm run dist
 
 ---
 
-## 🏗️ Architecture & Security
+## Architecture & Security
 
-```
+```text
 ┌────────────────────────────── Electron Shell ──────────────────────────────┐
 │ main.js (Node.js runtime)              preload.js (Context Isolation)      │
 │  • Frameless Window & Native Titlebar   • window.desktop IPC bridge        │
@@ -121,7 +150,7 @@ npm run dist
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
