@@ -1,0 +1,63 @@
+{
+  "name": "basalt",
+  "productName": "Basalt",
+  "version": "0.2.2",
+  "description": "Local-first Markdown knowledge base on top of plain .md folders on your own disk. Zero network, zero telemetry.",
+  "main": "main.js",
+  "author": "Basalt contributors",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron .",
+    "test": "node scripts/test-api.mjs",
+    "serve:demo": "node scripts/serve-web-demo.mjs",
+    "build:web": "node scripts/build-web.mjs",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "esbuild": "0.24.0"
+  },
+  "build": {
+    "appId": "io.github.basalt.notes",
+    "productName": "Basalt",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/renderer/**/*",
+      "src/main-api.cjs",
+      "assets/**/*",
+      "package.json",
+      "LICENSE",
+      "README.md"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "LICENSE",
+      "shortcutName": "Basalt"
+    }
+  }
+}

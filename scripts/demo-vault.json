@@ -1,0 +1,261 @@
+{
+  "name": "Demo Vault",
+  "folders": [
+    {
+      "id": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Getting Started",
+      "parentId": null
+    },
+    {
+      "id": "cmwav6et8002znuyyk56pjmro",
+      "name": "Guides",
+      "parentId": null
+    },
+    {
+      "id": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Workshop",
+      "parentId": null
+    },
+    {
+      "id": "cmwav6etx003znuyytcs4ez1b",
+      "name": "Projects",
+      "parentId": null
+    },
+    {
+      "id": "cmwav6eu00045nuyyj1l1pbxn",
+      "name": "Templates",
+      "parentId": null
+    },
+    {
+      "id": "cmwav6eu3004bnuyy2v8qflhf",
+      "name": "Daily notes",
+      "parentId": null
+    }
+  ],
+  "notes": [
+    {
+      "id": "cmwav6eu8004jnuyydlwxmifm",
+      "folderId": null,
+      "name": "Welcome",
+      "content": "---\ntags:\n  - welcome\n  - start\naliases:\n  - Home\n  - Start Here\ncssclass: wide-page\n---\n\n# Welcome to your vault\n\nThis is **Basalt** — a private, flexible Markdown knowledge base — a private, flexible note-taking app built around plain-text files and [[Linking your notes|wiki-links]].\n\n> [!tip] Quick start\n> Press `Ctrl + O` to jump to any note, or `Ctrl + P` to open the **command palette**. Try `Ctrl + G` to see the [[Graph view|graph]] of your vault.\n\n## What can I do here?\n\n1. Learn the [[Basics of Markdown]] — formatting, lists, tables, code and tasks\n2. Connect ideas with [[Linking your notes]] and explore [[Backlinks and mentions]]\n3. Organize with [[Tags & properties]] and [[Maps of content]]\n4. Automate with [[Daily notes]], [[Templates]] and the [[Command palette]]\n5. See your knowledge as a network in the [[Graph view]]\n\n## Where to go next\n\n- New to note-taking systems? Start with [[Zettelkasten method]] and [[Atomic notes]]\n- Working on something? See [[Website redesign]] in *Projects*\n- Just exploring? Browse the [[Workshop]] ideas, or check today's [[2026-11-10|daily note]]\n\n> [!note] Everything is connected\n> The graph shows how notes reference each other. Notes that don't exist yet — like [[Reading list]] — can be created by simply clicking the link.\n\n#start #guide",
+      "position": 0
+    },
+    {
+      "id": "cmwav6et1002nnuyyds8pigqa",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Basics of Markdown",
+      "content": "---\ntags:\n  - guide\n  - start\n---\n\n# Basics of Markdown\n\nBasalt is a Markdown editor. Markdown is a lightweight syntax for formatting text — you type a few symbols and the text becomes rich.\n\n## Formatting\n\nYou can write **bold**, *italic*, ~~strikethrough~~, ==highlighted== and `inline code`.\n\nCombine them freely: ***bold italic***, or **bold with *nested italic***.\n\n## Lists\n\nUnordered lists:\n\n- Milk\n- Bread\n    - Whole grain\n- Coffee\n\nOrdered lists:\n\n1. First\n2. Second\n3. Third\n\n### Task lists\n\nTask lists (click the checkboxes!):\n\n- [x] Create a vault\n- [x] Write my first note\n- [ ] Link two notes together\n- [ ] Open the [[Graph view]]\n\n## Quotes\n\n> \"The palest ink is better than the best memory.\"\n> — Chinese proverb\n\n## Code\n\nInline code: `npm run dev`. Fenced code blocks keep their syntax highlighting:\n\n```ts\ninterface Note {\n  id: string\n  name: string\n  content: string\n  links: string[]\n}\n\n/** Resolve a [[wikilink]] to a note path. */\nexport function resolve(target: string): Note | null {\n  return notes.find((n) => n.name === target) ?? null\n}\n```\n\n```python\ndef fib(n: int) -> int:\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n```\n\n## Tables\n\n| Shortcut | Action | Notes |\n| --- | --- | --- |\n| `Ctrl + P` | Command palette | Run anything |\n| `Ctrl + O` | Quick switcher | Jump to a note |\n| `Ctrl + E` | Toggle edit / reading | Per note |\n| `Ctrl + G` | Graph view | Visualize links |\n\n## Horizontal rule\n\n---\n\n## Links\n\nThe most important syntax lives in [[Linking your notes]].\n\n#guide #start",
+      "position": 0
+    },
+    {
+      "id": "cmwav6et90031nuyydn2id545",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Graph view",
+      "content": "---\ntags:\n  - guide\n---\n\n# Graph view\n\nPress `Ctrl + G` or click the graph icon in the left ribbon. The graph is an interactive map of how your notes connect.\n\n## Reading the graph\n\n- **Node size** = number of links to that note\n- **Colors** = groups you define (by tag or path)\n- **Faded nodes** = unresolved links — notes that don't exist yet\n- Hover a node to highlight its neighborhood and see labels\n\n## Interacting\n\n- **Drag** a node to pin it\n- **Scroll** to zoom, drag the background to pan\n- Click the ⚙️ settings icon for filters, groups, display and force controls\n- Click a node to open the note\n\n## Local graph\n\nRight-click any note → *Open local graph*, or use the command palette. It shows only the current note's neighborhood, with a depth slider — perfect for staying oriented inside one topic like [[Workshop]].\n\nThe graph of this vault was seeded to look interesting on purpose — explore the cluster around [[Zettelkasten method]].\n\n#guide",
+      "position": 0
+    },
+    {
+      "id": "cmwav6etn003lnuyyv14puaam",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Workshop",
+      "content": "---\ntags:\n  - structure\n---\n\n# Workshop\n\nA loose collection of note-taking methods. These work best combined:\n\n- [[Zettelkasten method]] — the grandfather system\n- [[Atomic notes]] — the unit of thought\n- [[Evergreen notes]] — notes that compound\n- [[Progressive summarization]] — layered emphasis\n- [[Spaced repetition]] — resurfacing on a schedule\n\nStart anywhere; they all point at each other. The [[Graph view]] makes the cluster easy to see.\n\n#structure",
+      "position": 0
+    },
+    {
+      "id": "cmwav6ety0041nuyy65jf8sdd",
+      "folderId": "cmwav6etx003znuyytcs4ez1b",
+      "name": "Website redesign",
+      "content": "---\nstatus: in progress\npriority: high\ndue: 2026-11-30\nteam:\n  - Maya\n  - Jonas\n  - Priya\ntags:\n  - project\n---\n\n# Website redesign\n\n> [!info] Project brief\n> Refresh the marketing site: new type system, case studies, and a docs area. Due end of November.\n\n## Milestones\n\n- [x] Stakeholder interviews\n- [x] Content audit\n- [ ] Wireframes — *Maya*\n- [ ] Type & color system\n- [ ] Docs area IA\n- [ ] Launch checklist\n\n## Notes\n\n- Audit summary lives in [[2026-11-09|Monday's daily note]]\n- Open questions tracked in [[Research questions]]\n- The [[Workshop]] methods inform how we keep project notes linked\n\n## Log\n\n| Date | Entry |\n| --- | --- |\n| 2026-11-08 | Kickoff, scope agreed |\n| 2026-11-09 | Content audit done — 214 pages, 61% stale |\n| 2026-11-10 | Started wireframes |\n\n#project",
+      "position": 0
+    },
+    {
+      "id": "cmwav6eu10047nuyyvg33wq3w",
+      "folderId": "cmwav6eu00045nuyyj1l1pbxn",
+      "name": "Daily template",
+      "content": "---\ntags:\n  - daily\n---\n\n# {{title}}\n\n<< [[{{prev_daily}}]] | [[{{next_daily}}]] >>\n\n## Tasks\n\n- [ ]\n\n## Focus\n\nWhat matters today:\n\n## Notes\n\n#daily",
+      "position": 0
+    },
+    {
+      "id": "cmwav6eu4004dnuyyivkn5109",
+      "folderId": "cmwav6eu3004bnuyy2v8qflhf",
+      "name": "2026-11-08",
+      "content": "---\ntags:\n  - daily\n---\n\n# 2026-11-08\n\n## Tasks\n\n- [x] Kick off [[Website redesign]]\n- [x] Set up this vault and read [[Welcome]]\n- [ ] Start [[Reading list]]\n\n## Focus\n\nSetting up the system: folders, templates, daily notes.\n\n## Notes\n\n- The [[Zettelkasten method]] intro video was good; skimming [[Atomic notes]] next\n- Question for tomorrow: when do [[Maps of content]] become worth building?\n\n#daily",
+      "position": 0
+    },
+    {
+      "id": "cmwav6eu9004lnuyyj57wpwb6",
+      "folderId": null,
+      "name": "Ideas",
+      "content": "---\ntags:\n  - idea\n---\n\n# Ideas\n\nA scratchpad of unpolished ideas. None of these are linked yet — which is exactly why the **unlinked mentions** section of [[Evergreen notes]] and [[Zettelkasten method]] is useful: it finds text that *could* be a link.\n\n1. An evergreen notes garden where notes \"decay\" without reviews\n2. Zettelkasten method but every note must fit a single screenshot\n3. A plugin that auto-suggests links from unlinked mentions\n4. Weekly review template that queries tasks across all daily notes\n\n> [!tip] Try it\n> Open [[Evergreen notes]] and check its **Unlinked mentions** panel — this note appears there. Press *Link* to convert the mention into a real link.\n\n#idea",
+      "position": 1
+    },
+    {
+      "id": "cmwav6et2002pnuyywufr2qzy",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Linking your notes",
+      "content": "---\ntags:\n  - guide\naliases:\n  - Wikilinks\n---\n\n# Linking your notes\n\nLinks are the whole point of a networked thought tool. Type `[[` and start typing a note name — an autocomplete will help you.\n\n## Kinds of links\n\n- A normal link: [[Basics of Markdown]]\n- A link with a different display text: [[Basics of Markdown|custom alias]]\n- A link to a section: [[Callouts#Foldable callouts]]\n- A link to a block: [[Embeds#^block-quote]]\n- A link to a note that doesn't exist yet: [[Reading list]] — click it to create the note\n- An image or attachment embed: `![[diagram.png]]` or `![Alt text](image.png)`\n\n## Unresolved links\n\nLinks to missing notes are shown in a faded color — they are invitations. Basalt treats them as *potential* notes, and they appear in the [[Graph view]] as faded nodes. ^unresolved\n\n## How linking changes thinking\n\nInstead of sorting notes into rigid folders, let links do the organizing:\n\n1. Write an [[Atomic notes|atomic note]] about one idea\n2. Link it to related ideas as you think of them\n3. Let [[Maps of content]] emerge as hubs\n4. Discover connections you didn't plan via [[Backlinks and mentions]]\n\n> [!quote] Victoria Emeret\n> The moment you link one thought to another, you create a path that didn't exist before.\n\nSee also: [[Zettelkasten method]], [[Evergreen notes]], [[Tags & properties]]\n\n#guide",
+      "position": 1
+    },
+    {
+      "id": "cmwav6eta0033nuyyemc2q4tb",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Search tips",
+      "content": "---\ntags:\n  - guide\n---\n\n# Search tips\n\nOpen search with `Ctrl + Shift + F` or the left sidebar's magnifier. Beyond plain text, Basalt supports search operators:\n\n| Operator | Matches | Example |\n| --- | --- | --- |\n| `tag:` | Notes with a tag | `tag:#guide` |\n| `path:` | Notes in a path | `path:Workshop` |\n| `file:` | Note names only | `file:graph` |\n| `line:( )` | Terms on the same line | `line:(zettelkasten links)` |\n| quotes | Exact phrase | `\"atomic notes\"` |\n| `OR` | Either term | `graph OR graphview` |\n| parentheses | Grouping | `(tag:#guide OR tag:#start)` |\n\n## Tips\n\n- Toggle **Aa** for case-sensitive matching\n- Results are grouped per file with contextual snippets — click to jump\n- Search for links with `[[Note name]]`\n- Combine a search with a bookmark: press the bookmark icon next to the search bar\n\nSee also: [[Tags & properties]], [[Command palette]]\n\n#guide",
+      "position": 1
+    },
+    {
+      "id": "cmwav6etr003nnuyyglnfhf9g",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Zettelkasten method",
+      "content": "---\ntags:\n  - method\naliases:\n  - Zettelkasten\n---\n\n# Zettelkasten method\n\nThe **Zettelkasten** (German: \"slip-box\") is a note-taking method developed by sociologist Niklas Luhmann, who used it to write more than 70 books and hundreds of articles.\n\n## Core principles\n\n1. **One idea per note** — see [[Atomic notes]]\n2. **Write in your own words** — a note you can't understand later is worthless\n3. **Link relentlessly** — every new note must be connected to at least one existing note, following [[Linking your notes]]\n4. **No rigid categories** — structure emerges bottom-up, visible in the [[Graph view]]\n\n## The three kinds of notes\n\n- **Fleeting notes** — quick captures, processed or deleted daily (your [[Daily notes]])\n- **Literature notes** — what a source said, in your words, with a reference\n- **Permanent notes** — polished, atomic, densely linked ideas like [[Evergreen notes]]\n\n> [!quote] Niklas Luhmann\n> One cannot think without writing.\n\nRelated: [[Atomic notes]], [[Evergreen notes]], [[Progressive summarization]], [[Spaced repetition]]\n\n#method",
+      "position": 1
+    },
+    {
+      "id": "cmwav6etz0043nuyyafqoba4w",
+      "folderId": "cmwav6etx003znuyytcs4ez1b",
+      "name": "Research questions",
+      "content": "---\nstatus: in-progress\npriority: 8\ntags:\n  - project\n---\n\n# Research questions\n\nOpen questions collected while working on [[Website redesign]] and reading about knowledge management.\n\n## Open\n\n- [ ] Does tool choice ([[Basalt tooling|tooling]]) actually affect note quality, or only note *quantity*?\n- [ ] What's the retention difference between [[Spaced repetition]] and rereading? (paper: Dunlosky 2013)\n- [ ] How large does a [[Zettelkasten method|Zettelkasten]] need to be before emergent structure appears?\n- [ ] Is [[Progressive summarization]] worth the overhead for teams, or only individuals?\n\n## Answered\n\n- [x] Can a web app replicate Obsidian faithfully? — **Yes.** You're looking at Basalt.\n- [x] Do unresolved links belong in the graph? — Yes, as faded nodes. See [[Linking your notes]].\n\n> [!question] Your turn\n> Add a question, then link it to a note where the answer might live — perhaps [[Reading list]].\n\n#project",
+      "position": 1
+    },
+    {
+      "id": "cmwav6eu20049nuyyy69e2a2f",
+      "folderId": "cmwav6eu00045nuyyj1l1pbxn",
+      "name": "Meeting notes template",
+      "content": "---\ntags:\n  - meeting\nattendees:\n---\n\n# {{title}}\n\n**Date:** {{date}} {{time}}\n\n## Agenda\n\n-\n\n## Notes\n\n## Action items\n\n- [ ]\n\n#meeting",
+      "position": 1
+    },
+    {
+      "id": "cmwav6eu5004fnuyypxumhaoo",
+      "folderId": "cmwav6eu3004bnuyy2v8qflhf",
+      "name": "2026-11-09",
+      "content": "---\ntags:\n  - daily\n---\n\n# 2026-11-09\n\n<< [[2026-11-08]] | [[2026-11-10]] >>\n\n## Tasks\n\n- [x] Content audit for [[Website redesign]] — 214 pages, 61% stale\n- [x] Read [[Evergreen notes]] and [[Progressive summarization]]\n- [ ] Convert two ideas from [[Ideas]] into atomic notes\n\n## Focus\n\nDeep work block on the audit; capture friction is real — everything goes to [[Ideas]] first.\n\n## Notes\n\n- The unlinked mentions panel in [[Evergreen notes]] is a link-harvesting machine\n- Wireframes start tomorrow with Maya\n\n#daily",
+      "position": 1
+    },
+    {
+      "id": "cmwav6eub004nnuyysjhhwt01",
+      "folderId": null,
+      "name": "Reading list",
+      "content": "---\ntags:\n  - list\nstatus: evergreen\n---\n\n# Reading list\n\n- *How to Take Smart Notes* — Sönke Ahrens → [[Zettelkasten method]]\n- *Building a Second Brain* — Tiago Forte → [[Progressive summarization]]\n- *How to Read a Book* — Adler & Van Doren\n- Andy Matuschak's notes → [[Evergreen notes]]\n- Dunlosky et al. 2013, *Improving Students' Learning* → [[Spaced repetition]]\n\n#list",
+      "position": 2
+    },
+    {
+      "id": "cmwav6et3002rnuyy3nh7wvpr",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Tags & properties",
+      "content": "---\ntags:\n  - guide\npriority: high\nreviewed: true\nreview-count: 3\nnext-review: 2026-11-15\naliases:\n  - Frontmatter\n  - Properties\n---\n\n# Tags & properties\n\n## Tags\n\nAdd a `#` before a word anywhere in a note to tag it, like #guide or #method. Tags live in the **Tags** panel on the right sidebar. Click a tag to search for it.\n\nMulti-word tags work too: #deep-work/session\n\nTags are great for status and categories; links are great for relationships and thoughts. Use both — see [[Linking your notes]].\n\n## Properties\n\nEvery note can have a YAML frontmatter block — properties. This note's properties look like this in source mode:\n\n```yaml\n---\ntags:\n  - guide\npriority: high\nreviewed: true\nnext-review: 2026-11-15\n---\n```\n\nThe property editor at the top of this note shows them as a table with typed values:\n\n- **Text** — free-form strings\n- **List** — comma-separated arrays (like `tags` and `aliases`)\n- **Number** — numeric values\n- **Checkbox** — true / false\n- **Date** — calendar dates\n\nProperties power searches like `tag:#guide` and can be added from the **Add property** button. See [[Website redesign]] for a project using properties for status and due dates.\n\n#guide",
+      "position": 2
+    },
+    {
+      "id": "cmwav6etb0035nuyyeggjiwvn",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Daily notes",
+      "content": "---\ntags:\n  - guide\n---\n\n# Daily notes\n\nA daily note is a dated journal entry — one click creates today's note using your configured format (default `YYYY-MM-DD`) and folder.\n\n## Open today's note\n\n- Click the calendar icon in the left ribbon\n- Use the command palette → *Daily notes: Open today's daily note*\n- Or from this vault's [[2026-11-10|today's entry]]\n\n## Configuration\n\nIn **Settings → Daily notes** you can change:\n\n- The **date format** (e.g. `YYYY-MM-DD`)\n- The **folder** where dailies are stored (here: `Daily notes`)\n- The **template** used for new entries (here: [[Daily template]])\n\nDaily notes pair beautifully with [[Templates]] — the template in this vault automatically links to the previous day, projects and a task list.\n\n#guide",
+      "position": 2
+    },
+    {
+      "id": "cmwav6ets003pnuyy5hrh0bcp",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Atomic notes",
+      "content": "---\ntags:\n  - method\n---\n\n# Atomic notes\n\nAn atomic note contains **exactly one idea** — small enough to hold in your head, big enough to be useful.\n\n## Why atomic?\n\n- A note with one idea gets **one title** that means one thing\n- Links become precise: pointing at *this* idea, not a document full of them\n- Notes become **recombinable** — the same atom can support many arguments\n- Rewriting is cheap, so notes can be improved forever — the idea behind [[Evergreen notes]]\n\n## Rules of thumb\n\n1. If a note needs \"and\" in the title, split it\n2. Title notes as full claims when possible: *\"Notes improve with revision, not accumulation\"*\n3. When a note grows past ~300 words, look for the seam and split it — the [[Zettelkasten method]] call this a luhmann-id moment\n\n> [!tip] Practice\n> Take your last long meeting note and split it into atoms. You'll find 3–5 ideas hiding in it.\n\n#method",
+      "position": 2
+    },
+    {
+      "id": "cmwav6eu6004hnuyyg8xz8nk9",
+      "folderId": "cmwav6eu3004bnuyy2v8qflhf",
+      "name": "2026-11-10",
+      "content": "---\ntags:\n  - daily\n---\n\n# 2026-11-10\n\n<< [[2026-11-09]] | [[2026-11-11]] >>\n\n## Tasks\n\n- [ ] Wireframe review with Maya ([[Website redesign]])\n- [ ] Process [[Ideas]] into [[Atomic notes]]\n- [ ] Answer one [[Research questions|research question]]\n- [ ] Read [[Spaced repetition]] and schedule reviews\n\n## Focus\n\nWireframes in the morning, note-processing in the afternoon.\n\n## Notes\n\n- Today this vault became a web app. Everything still feels local.\n- The [[Graph view]] cluster around [[Zettelkasten method]] is getting dense — time for a [[Maps of content|map of content]]?\n\n#daily",
+      "position": 2
+    },
+    {
+      "id": "cmwav6et4002tnuyyunbf4c3i",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Embeds",
+      "content": "---\ntags:\n  - guide\n---\n\n# Embeds\n\nAny link can become an **embed** by adding a `!` in front. Embedded content renders *inside* the current note, stays live, and can even be edited where it appears.\n\n## Embed a whole note\n\n![[Zettelkasten method]]\n\n## Embed a section\n\nEmbed only a heading and its content:\n\n![[Basics of Markdown#Task lists]]\n\n## Embed a specific block\n\nAdd `^` and the block id in source mode:\n\n![[Linking your notes#^unresolved]]\n\nEmbeds work with anything linkable — notes, headings, and blocks. They're the building blocks of dashboards and [[Maps of content]].\n\n#guide",
+      "position": 3
+    },
+    {
+      "id": "cmwav6etd0037nuyywh6w6uiu",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Templates",
+      "content": "---\ntags:\n  - guide\n---\n\n# Templates\n\nTemplates let you insert reusable content into any note — boilerplate, structure, checklists.\n\n## Using templates\n\n1. Keep template files in a folder — this vault uses `Templates`\n2. Point **Settings → Templates** at that folder\n3. Run the command palette → *Templates: Insert template*, or use the ribbon icon\n4. Pick a template from the list — it's inserted at your cursor\n\n## Placeholder tokens\n\n| Token | Expands to |\n| --- | --- |\n| `{{title}}` | The current note's title |\n| `{{date}}` | Today's date (configurable format) |\n| `{{time}}` | Current time |\n\nThis vault ships two templates: [[Daily template]] and [[Meeting notes template]]. See [[Daily notes]] for how dailies use them automatically.\n\n#guide",
+      "position": 3
+    },
+    {
+      "id": "cmwav6ett003rnuyy829hjqac",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Evergreen notes",
+      "content": "---\ntags:\n  - method\naliases:\n  - Evergreen note\n---\n\n# Evergreen notes\n\nEvergreen notes are written to **accumulate value over time** (Andy Matuschak's term). Unlike a journal entry or a meeting note, an evergreen note is revised, renamed and re-linked as your understanding improves.\n\n## Qualities of an evergreen note\n\n- **Concept-oriented** — about an idea, not an event\n- **Densely linked** — connected into the web of [[Atomic notes]]\n- **Written for your future self** — complete sentences, no shorthand\n- **Continuously revised** — you'll revisit it whenever a linked note changes\n\n## Evergreen vs. fleeting\n\n| | Fleeting | Evergreen |\n| --- | --- | --- |\n| Lifetime | Days | Forever |\n| Audience | Present you | Future you |\n| Editing | None | Constant |\n| Example | [[2026-11-10]] | [[Zettelkasten method]] |\n\n#method",
+      "position": 3
+    },
+    {
+      "id": "cmwav6et6002vnuyyxxgv7ryu",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Callouts",
+      "content": "---\ntags:\n  - guide\n---\n# Callouts\n\nCallouts are colored, foldable blocks for asides, warnings and tips. Twelve types ship by default.\n\n> [!note] Note\n> A note callout. Useful background info.\n\n> [!abstract] Abstract / Summary\n> A condensed overview.\n\n> [!info] Info\n> Neutral information.\n\n> [!tip] Tip\n> Helpful advice — like: press `Ctrl + P` to open the command palette.\n\n> [!success] Success / Check\n> Something completed successfully.\n\n> [!question] Question\n> An open question — great for [[Research questions]].\n\n> [!warning] Warning / Caution\n> Careful with this one.\n\n> [!failure] Failure / Danger\n> Something went wrong.\n\n> [!bug] Bug\n> Known issue.\n\n> [!example] Example\n> A demonstration of the concept.\n\n> [!quote] Quote\n> A quotation with attribution.\n\n> [!todo] Todo\n> An outstanding action.\n\n## Foldable callouts\n\nAdd `+` after the type to make the callout expandable by default, or `-` to collapse it:\n\n> [!tip]- Folded by default\n> Click the header to expand. This is how the FAQ-style notes are built.\n\n> [!tip]+ Expanded by default\n> Click the header to collapse me.\n\n#guide\n",
+      "position": 4
+    },
+    {
+      "id": "cmwav6ete0039nuyyn9o6oeyx",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Note composer",
+      "content": "---\ntags:\n  - guide\n---\n\n# Note composer\n\nNote composer is the pair of commands for restructuring notes:\n\n## Extract selection\n\nSelect text, run *Note composer: Extract current selection*, give the new note a name — and the selection becomes a new note, replaced by a link to it. Perfect for growing an [[Atomic notes|atomic note]] out of a paragraph that outgrew its home.\n\n## Merge current file with another file\n\nThe inverse: folds the current note into another note, leaving a link (or nothing) behind.\n\nBoth commands are in the command palette and the editor's ⋯ menu.\n\n#guide",
+      "position": 4
+    },
+    {
+      "id": "cmwav6etu003tnuyy7z0tumwt",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Progressive summarization",
+      "content": "---\ntags:\n  - method\n---\n\n# Progressive summarization\n\nTiago Forte's technique for layering emphasis onto notes as you revisit them, so the important parts surface themselves.\n\n## The layers\n\n1. **Layer 0** — the original source note\n2. **Layer 1** — bold the parts that matter\n3. **Layer 2** — *italicize* the best of the bold\n4. **Layer 3** — ==highlight== the essential\n5. **Layer 4** — write a tiny summary in your own words\n\nEach pass is optional and opportunistic: only summarize what proves useful. Over time each note becomes a compressed version of itself — like ==this sentence==, which survived four revisits.\n\nPair it with [[Spaced repetition]] to resurface notes on a schedule, and keep the source atomic ([[Atomic notes]]).\n\n#method",
+      "position": 4
+    },
+    {
+      "id": "cmwav6et7002xnuyy7hfmvuic",
+      "folderId": "cmwav6et0002lnuyyg3vxo4tm",
+      "name": "Keyboard shortcuts",
+      "content": "---\ntags:\n  - guide\n---\n\n# Keyboard shortcuts\n\nBasalt is keyboard-first. The essentials:\n\n## Global\n\n| Shortcut | Action |\n| --- | --- |\n| `Ctrl + P` | Open command palette |\n| `Ctrl + O` | Open quick switcher |\n| `Ctrl + N` | Create new note |\n| `Ctrl + E` | Toggle edit / reading view |\n| `Ctrl + G` | Open graph view |\n| `Ctrl + Shift + F` | Search in all files |\n| `Ctrl + ,` | Open settings |\n| `Alt + ←` / `Alt + →` | Navigate back / forward |\n| `Ctrl + W` | Close current tab |\n\n## Editor\n\n| Shortcut | Action |\n| --- | --- |\n| `Ctrl + B` | Bold selection |\n| `Ctrl + I` | Italicize selection |\n| `Ctrl + K` | Insert external link |\n| `Ctrl + L` | Toggle checkbox |\n| `Ctrl + D` | Delete line / block |\n| `Ctrl + F` | Find in current note |\n| `Ctrl + H` | Find & replace |\n| `Esc` | Close popup / stop editing |\n\nThe full list lives in **Settings → Hotkeys**, where every command can be rebound.\n\nSee also: [[Command palette]], [[Basics of Markdown]]\n\n#guide",
+      "position": 5
+    },
+    {
+      "id": "cmwav6etf003bnuyyka5622qb",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Backlinks and mentions",
+      "content": "---\ntags:\n  - guide\naliases:\n  - Backlinks\n---\n\n# Backlinks and mentions\n\nOpen the right sidebar's **Backlinks** tab (or press the link count in the status bar). Backlinks answer the question every folder-based system fails at: *what points here?*\n\n## Linked mentions\n\nNotes containing a `[[link]]` to the current note, with the surrounding context. Click a mention to jump to the source.\n\n## Unlinked mentions\n\nOccurrences of the note's *name* in other notes that aren't links yet — with a **Link** button that converts them in place. This is the cheapest way to densify your graph; [[Ideas]] is full of them for exactly this reason.\n\n## In the graph\n\nEvery backlink is an edge in the [[Graph view]]. Hubs like [[Zettelkasten method]] get big nodes precisely because many notes point at them.\n\n#guide",
+      "position": 5
+    },
+    {
+      "id": "cmwav6etv003vnuyyjq60qw7h",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Spaced repetition",
+      "content": "---\ntags:\n  - method\n---\n\n# Spaced repetition\n\nSpaced repetition resurfaces knowledge at increasing intervals, exploiting the *spacing effect*: memory strengthens most when recall is attempted just before forgetting.\n\n## Why it works\n\n> [!abstract] The spacing effect\n> Reviews are most effective when scheduled at the moment recall is about to fail — each successful, effortful recall pushes the forgetting curve further out.\n\n## Applying it to notes\n\n- Review notes at expanding intervals: 1 day → 1 week → 1 month\n- Question-driven: convert a note's claim into a question, quiz yourself first\n- Tools like Anki schedule this automatically; a simple \"next-review\" property (like in [[Tags & properties]]) plus a daily check works too\n\nThis is the retrieval half of the learning loop; [[Progressive summarization]] is the compression half.\n\n#method",
+      "position": 5
+    },
+    {
+      "id": "cmwav6etg003dnuyywdhp3z33",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Command palette",
+      "content": "---\ntags:\n  - guide\naliases:\n  - Palette\n---\n\n# Command palette\n\nPress `Ctrl + P`. The palette lists every command in the app with its hotkey — editor actions, navigation, plugin commands — filtered as you type.\n\n## Tips\n\n- Start typing to fuzzy-search commands\n- Everything in the [[Keyboard shortcuts|shortcuts table]] is a command too\n- Commands respect context: graph commands appear in graph tabs, editor commands in notes\n- `Ctrl + O` is the sibling palette for **files** — the [[Quick switcher]]\n\nIf you can't find a feature, the palette is the fastest way to reach it.\n\n#guide",
+      "position": 6
+    },
+    {
+      "id": "cmwav6etw003xnuyyyjaosys5",
+      "folderId": "cmwav6etl003jnuyy5vaqf1v5",
+      "name": "Maps of content",
+      "content": "---\ntags:\n  - structure\naliases:\n  - MOC\n  - Map of Content\n---\n\n# Maps of content\n\nA **map of content** (MOC) is a hub note that curates links to a topic — a table of contents you write yourself. Structure in Basalt is emergent: folders stay shallow, MOCs do the organizing.\n\n## Anatomy of a good MOC\n\n- A one-paragraph definition of the topic\n- Links grouped by sub-theme, not exhaustive\n- Notes that earn their place through repeated linking — you can see candidates in the [[Graph view]]\n- A link back \"up\" to broader MOCs when one exists\n\n## This vault's structure\n\n- [[Welcome]] — the entry point\n- [[Workshop]]-adjacent methods: [[Zettelkasten method]], [[Atomic notes]], [[Evergreen notes]], [[Progressive summarization]], [[Spaced repetition]]\n- Guides: [[Search tips]], [[Graph view]], [[Daily notes]], [[Templates]]\n\nWhen a MOC gets crowded, split it: the same logic as [[Atomic notes]].\n\n#structure",
+      "position": 6
+    },
+    {
+      "id": "cmwav6eth003fnuyyn2ux78gl",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Quick switcher",
+      "content": "---\ntags:\n  - guide\naliases:\n  - Switcher\n---\n\n# Quick switcher\n\nPress `Ctrl + O` and type. The switcher fuzzy-matches note names (and [[Tags & properties|aliases]]), showing the full path under each result.\n\n- `Enter` opens the top hit\n- `Ctrl + Enter` opens it in a new tab\n- `↑` `↓` move through results\n- No match? The first result becomes **Create note** — pressing Enter creates it on the spot\n\nThis is the fastest way to navigate a vault: type three letters, hit Enter, keep writing.\n\n#guide",
+      "position": 7
+    },
+    {
+      "id": "cmwav6eti003hnuyyg5lujta0",
+      "folderId": "cmwav6et8002znuyyk56pjmro",
+      "name": "Basalt tooling",
+      "content": "---\ntags:\n  - guide\n---\n\n# Basalt tooling\n\nThe pieces of this app that make a vault feel alive:\n\n- [[Command palette]] — every action, one keystroke away\n- [[Quick switcher]] — fuzzy-find any note by name\n- [[Graph view]] — the map of the vault\n- [[Backlinks and mentions]] — what links here?\n- [[Daily notes]] — journaling with zero friction\n- [[Templates]] — stop retyping structure\n- [[Note composer]] — refactor notes like code\n\n> [!info] Web edition\n> This replica stores your vault server-side, so it survives reloads and works in any browser. Everything else — the editor, the linking, the graph — behaves like the desktop app.\n\n#guide",
+      "position": 8
+    }
+  ]
+}
